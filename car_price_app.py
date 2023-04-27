@@ -72,7 +72,7 @@ with col1:
     curbweight = st.number_input("Curb weight", min_value=1000, max_value=6000, step=1, value=default_values["curbweight"])
     enginesize = st.number_input("Engine size", min_value=20, max_value=800, step=1, value=default_values["enginesize"])
     boreratio = st.number_input("Bore ratio", min_value=0.0, max_value=10.0, step=0.01, value=default_values["boreratio"])
-    horsepower = st.number_input("horsepower", min_value=20, max_value=500, step=1, value=default_values["horsepower"])
+    horsepower = st.number_input("Horsepower", min_value=20, max_value=500, step=1, value=default_values["horsepower"])
     fueleconomy = st.number_input("Fuel economy", min_value=0, max_value=100, step=1, value=default_values["fueleconomy"])
 
 
@@ -93,11 +93,11 @@ with col2:
 with col3:
     st.image("DALL·E 2023-04-26 16.25.42.png")
         # Fonction pour afficher la prédiction lorsque l'utilisateur clique sur le bouton
-    if st.button("Prédire le prix de la voiture", key='predict'):
+    if st.button("Predict the car price", key='predict'):
         result = predict_price(wheelbase, carlength, carwidth, curbweight, enginesize, boreratio, horsepower, fueleconomy,
                     symboling, fueltype, aspiration, doornumber, carbody, drivewheel, enginelocation, enginetype, cylindernumber,
                     fuelsystem, car_company)
         result= round(result)
-        st.write("<h1>Le prix de la voiture est estimé à :</h1>", f"<h1 style='color: green; font-weight: bold; font-size: 48px;'>${result}</h1>", unsafe_allow_html=True)
+        st.write("<h1>The car price is estimated at :</h1>", f"<h1 style='color: green; font-weight: bold; font-size: 48px;'>${result}</h1>", unsafe_allow_html=True)
 
 
