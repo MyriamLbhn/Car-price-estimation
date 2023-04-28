@@ -81,7 +81,7 @@ with col2:
     symboling = st.selectbox("Symboling", options=["-3", "-2", "-1", "0", "1", "2", "3"], index=int(default_values["symboling"]) + 3)
     fueltype = st.selectbox("Fuel type", options=["gas", "diesel"], index=1 if default_values["fueltype"] == "diesel" else 0)
     aspiration = st.selectbox("Aspiration", options=["std", "turbo"], index=1 if default_values["aspiration"] == "turbo" else 0)
-    doornumber = st.selectbox("Number of doors", options=["two", "four"], index=1 if default_values["doornumber"] == "four" else 0)
+    doornumber = st.selectbox("Number of doors", options=["2", "4"], index=1 if default_values["doornumber"] == "four" else 0)
     carbody = st.selectbox("Car body", options=["sedan", "hatchback", "wagon", "hardtop", "convertible"], index=["sedan", "hatchback", "wagon", "hardtop", "convertible"].index(default_values["carbody"]))
     drivewheel = st.selectbox("Drivewheel", options=["fwd", "rwd", "4wd"])
     enginelocation = st.selectbox("Engine location", options=["front", "rear"])
