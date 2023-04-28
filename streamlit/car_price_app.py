@@ -3,7 +3,8 @@ import joblib
 import pandas as pd
 
 # Chargement du modèle pré-entraîné
-model = joblib.load('trained_pipe_ridge_poly.joblib')
+model = joblib.load('./streamlit/trained_pipe_ridge_poly.joblib')
+
 
 # Création d'une fonction pour afficher le formulaire et faire des prédictions
 def predict_price(wheelbase, carlength, carwidth, curbweight, enginesize, boreratio, horsepower, fueleconomy,
