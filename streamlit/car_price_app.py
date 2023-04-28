@@ -74,7 +74,7 @@ with col1:
     enginesize = st.number_input("Engine size (L)", min_value=0.0, max_value=15.0, step=0.1, value=default_values["enginesize"])
     boreratio = st.number_input("Bore ratio", min_value=0.0, max_value=10.0, step=0.01, value=default_values["boreratio"])
     horsepower = st.number_input("Horsepower", min_value=20, max_value=500, step=1, value=default_values["horsepower"])
-    fueleconomy = st.number_input("Fuel economy (mpg)", min_value=0.00, max_value=12.0, step=0.1, value=default_values["fueleconomy"])
+    fueleconomy = st.number_input("Fuel economy (L/100km)", min_value=0.00, max_value=12.0, step=0.1, value=default_values["fueleconomy"])
     doornumber = st.selectbox("Number of doors", options=["2", "4"], index=1 if default_values["doornumber"] == "four" else 0)
     cylindernumber = st.selectbox("Number of cylinders", options=["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], 
                                   index=2 if default_values["cylindernumber"]=="four" else 0)
