@@ -67,14 +67,14 @@ default_values = {
 }
 
 with col1:
-    wheelbase = st.number_input("Wheelbase (in)", min_value=50.0, max_value=200.0, step=0.1, value=default_values["wheelbase"])
-    carlength = st.number_input("Car lenght (in)", min_value=100.0, max_value=300.0, step=0.1, value=default_values["carlength"])
-    carwidth = st.number_input("Car width (in)", min_value=30.0, max_value=100.0, step=0.1, value=default_values["carwidth"])
-    curbweight = st.number_input("Curb weight (lbs)", min_value=1000, max_value=6000, step=1, value=default_values["curbweight"])
-    enginesize = st.number_input("Engine size (in3)", min_value=20, max_value=800, step=1, value=default_values["enginesize"])
+    wheelbase = st.number_input("Wheelbase (m)", min_value=1.0, max_value=6.0, step=0.1, value=default_values["wheelbase"])
+    carlength = st.number_input("Car lenght (m)", min_value=2.0, max_value=10.0, step=0.1, value=default_values["carlength"])
+    carwidth = st.number_input("Car width (m)", min_value=1.0, max_value=4.0, step=0.1, value=default_values["carwidth"])
+    curbweight = st.number_input("Curb weight (kg)", min_value=400, max_value=3000, step=1, value=default_values["curbweight"])
+    enginesize = st.number_input("Engine size (L)", min_value=0.0, max_value=15.0, step=0.1, value=default_values["enginesize"])
     boreratio = st.number_input("Bore ratio", min_value=0.0, max_value=10.0, step=0.01, value=default_values["boreratio"])
     horsepower = st.number_input("Horsepower", min_value=20, max_value=500, step=1, value=default_values["horsepower"])
-    fueleconomy = st.number_input("Fuel economy (mpg)", min_value=0, max_value=100, step=1, value=default_values["fueleconomy"])
+    fueleconomy = st.number_input("Fuel economy (mpg)", min_value=0.00, max_value=12.0, step=0.1, value=default_values["fueleconomy"])
     doornumber = st.selectbox("Number of doors", options=["2", "4"], index=1 if default_values["doornumber"] == "four" else 0)
     cylindernumber = st.selectbox("Number of cylinders", options=["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], 
                                   index=2 if default_values["cylindernumber"]=="four" else 0)
