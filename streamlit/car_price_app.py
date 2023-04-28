@@ -92,7 +92,7 @@ with col2:
                                index=0 if default_values["car_company"]=="toyota" else 0)
 
 with col3:
-    st.image("DALL·E 2023-04-26 16.25.42.png")
+    st.image("./streamlit/DALL·E 2023-04-26 16.25.42.png")
         # Fonction pour afficher la prédiction lorsque l'utilisateur clique sur le bouton
     if st.button("Predict the car price", key='predict'):
         result = predict_price(wheelbase, carlength, carwidth, curbweight, enginesize, boreratio, horsepower, fueleconomy,
