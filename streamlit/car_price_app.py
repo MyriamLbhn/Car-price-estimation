@@ -75,18 +75,18 @@ with col1:
     boreratio = st.number_input("Bore ratio", min_value=0.0, max_value=10.0, step=0.01, value=default_values["boreratio"])
     horsepower = st.number_input("Horsepower", min_value=20, max_value=500, step=1, value=default_values["horsepower"])
     fueleconomy = st.number_input("Fuel economy (mpg)", min_value=0, max_value=100, step=1, value=default_values["fueleconomy"])
-
+    doornumber = st.selectbox("Number of doors", options=["2", "4"], index=1 if default_values["doornumber"] == "four" else 0)
+    cylindernumber = st.selectbox("Number of cylinders", options=["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], 
+                                  index=2 if default_values["cylindernumber"]=="four" else 0)
 
 with col2:
     symboling = st.selectbox("Symboling", options=["-3", "-2", "-1", "0", "1", "2", "3"], index=int(default_values["symboling"]) + 3)
     fueltype = st.selectbox("Fuel type", options=["gas", "diesel"], index=1 if default_values["fueltype"] == "diesel" else 0)
     aspiration = st.selectbox("Aspiration", options=["std", "turbo"], index=1 if default_values["aspiration"] == "turbo" else 0)
-    doornumber = st.selectbox("Number of doors", options=["2", "4"], index=1 if default_values["doornumber"] == "four" else 0)
     carbody = st.selectbox("Car body", options=["sedan", "hatchback", "wagon", "hardtop", "convertible"], index=["sedan", "hatchback", "wagon", "hardtop", "convertible"].index(default_values["carbody"]))
     drivewheel = st.selectbox("Drivewheel", options=["fwd", "rwd", "4wd"])
     enginelocation = st.selectbox("Engine location", options=["front", "rear"])
     enginetype = st.selectbox("Engine type", options=["ohc", "ohcf", "ohcv", "dohc", "l", "rotor", "dohcv"])
-    cylindernumber = st.selectbox("Number of cylinders", options=["two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"], index=2 if default_values["cylindernumber"]=="four" else 0)
     fuelsystem = st.selectbox("Fuel system", options=["mpfi", "2bbl", "idi", "1bbl", "spdi", "4bbl", "mfi", "spfi"], index=0 if default_values["fuelsystem"]=="mpfi" else 0)
     car_company = st.selectbox("Car brand", options=["toyota", "nissan", "mazda", "mitsubishi", "honda", "volkswagen", "subaru", "peugeot", "volvo", "dodge", "buick", "bmw", "audi", "plymouth", "saab", "porsche", "isuzu", "jaguar", "chevrolet", "alpha-romeo", "renault", "mercury"], 
                                index=0 if default_values["car_company"]=="toyota" else 0)
