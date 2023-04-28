@@ -45,14 +45,14 @@ col1, col2, col3 = st.columns(3)
 
 # Définir les valeurs par défaut
 default_values = {
-    "wheelbase": 102.4,
-    "carlength": 175.6,
-    "carwidth": 66.5,
-    "curbweight": 2414,
-    "enginesize": 122,
+    "wheelbase": 2.6,
+    "carlength": 4.4,
+    "carwidth": 1.7,
+    "curbweight": 1095,
+    "enginesize": 2.0,
     "boreratio": 3.33,
     "horsepower": 97,
-    "fueleconomy": 29,
+    "fueleconomy": 8.1,
     "symboling": "-1",
     "fueltype": "gas",
     "aspiration": "std",
